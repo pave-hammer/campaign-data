@@ -23,6 +23,10 @@ app.get("/:faction", (req, res, next) => {
   }
 })
 
+app.post("/", (req, res) => {
+  res.send("it worked!")
+})
+
 app.use((req, res, next) => {
   res.status(404).send("Requested resource was not found.")
 })
