@@ -1,0 +1,41 @@
+{
+  "factions": ["Carinhall", "IA"],
+  "catagory": [
+    {
+      "title": "The CarinHall",
+      "description": "Fifty years before the war between gods came to it's conclusion, The Carinhall was established, appropriately named after the founding hunter Dahn Carin, and has become the epicenter for temporary contracted work and hunting of the fiercest beasts known. Any citizen wishing work to be done, whether it be dangerous beast or transporting goods, can come to The Carinhall and offer reward for services rendered. Carinhall Members receive access to special missions hosting significantly more dangerous prey. Members can be identified by a magical branding on the shoulders, the symbol of the Lyall. Contracts are magically bound to the hunter who accepted the contract and any other Carinhall member that poaches a bound contract is subject to expulsion from the guild and/or death. Two massive tree trunks fifteen feet in diameter make the pillars of the Grand Archway that leads to the main hall. Immediately after walking in, you'll notice a fire pit directly in the center of the hall, surrounded by massive stone slabs resting on boulders forming a three-quarter circular table around the twenty foot tall blaze. Smoke billows into the open air through a vent hole in the ceiling some one hundred and fifty feet up. Carinhall members, triumphant from the hunt, will host feasts at this table for any wishing to celebrate.",
+      "additionalData": 
+      {
+        "title": "Carinhall Ranks",
+        "ranks": [
+          {
+            "rankTitle": "The Gerolf", 
+            "rankDescription": "The Grandmaster. There is only one, the title, respect, and authority is given to anyone that can bring in a trophy from a hunt that is equal to or greater than the current leaders most prestigious trophy. The Gerolf and the Challenger will then be given a hunt each to complete on their own. They are given 3 days to complete the hunt. Should both succeed, they will fight in hand to hand combat until only one stands. If one falls at any point in time, the survivor wins. If both fail, the most senior Lyall takes over until unseated."
+          },
+    
+          {
+            "rankTitle": "Lyall (Pronounced Loyal)", 
+            "rankDescription": "Full members of the Carinhall. Lyalls have access to Rank SS, Rank S, Rank A, Rank B, and Rank C contracts going through the guild with no restriction. Lyalls are responsible for maintaining the Hall, it's facilities and services along with other administrative tasks. These are usually reserved for the Lyalls that are not fit for combat, but have not outlived their usefulness and are generally very well respected. Lyalls on active hunting status will sponsor and mentor one Wolf and two Initiate."
+          },
+    
+          {
+            "rankTitle": "Wolf", 
+            "rankDescription": "Title given to a teams most senior Initiate. An Wolf is usually just as capable as the Lyall, reaching the advanced stages of training. They are primarily responsible for any additional or corrective training any Initiates may need. An Wolf has access to Rank B and C contracts. If a Wolf takes a higher ranking hunt, they may include all, any, or none of their Initiates, magically binding them to the contract as well. A Wolf may only become a Lyall if their Lyall either becomes the Gerolf, dies, or transfers to an inactive status. Additionally, if a Wolf is able to provide proof of worthy and successful hunt, the Gerolf may promote that Wolf to Lyall."
+          },
+    
+          {
+            "rankTitle": "Initiate", 
+            "rankDescription": "Initiate are still given the guild brand though they are only allowed to complete Rank C contracts. In order to become an Initiate, a prospective member must prove proficiency with hunting in general. For example, if a person were to bring the hide of a recently killed bear, can prove they were the one responsible for the kill, they will be presented to the Gerolf for approval. If the Gerolf believes a person to be capable, they will be assigned to a Lyall that will oversee an official guild hunt. Should the aspiring Initiate succeed in completing the task given, they will be ceremoniously branded and welcomed as an officially and permanently assigned to a Lyall."
+          }
+        ]
+      },
+      "faction": ["Carinhall"]
+    },
+    {
+      "title": "Infinite Arcanum",
+      "description": "Organization for magic",
+      "additionalData": "",
+      "faction": ["IA"]
+    }
+  ]
+}
