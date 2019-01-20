@@ -7,7 +7,7 @@
       "additionalData": 
       {
         "title": "Carinhall Member Ranks",
-        "ranks": [
+        "data": [
           {
             "rankTitle": "The Gerolf", 
             "rankDescription": "The Grandmaster. There is only one, the title, respect, and authority is given to anyone that can bring in a trophy from a hunt that is equal to or greater than the current leaders most prestigious trophy. The Gerolf and the Challenger will then be given a hunt each to complete on their own. They are given 3 days to complete the hunt. Should both succeed, they will fight in hand to hand combat until only one stands. If one falls at any point in time, the survivor wins. If both fail, the most senior Lyall takes over until unseated."
@@ -37,7 +37,7 @@
       "additionalData": 
       {
         "title": "Infinite Arcanum Members",
-        "members": [
+        "data": [
           {
             "memberTitle": "Arch Maker",
             "memberName": "Erimel Ervanion"
