@@ -1,5 +1,5 @@
 {
-  "factions": ["The Carinhall", "Infinite Arcanum", "Alabaster Lyceum"],
+  "factions": ["The Carinhall", "Infinite Arcanum", "The Alabaster Lyceum"],
   "organizations": [
     {
       "title": "The Carinhall",
@@ -58,7 +58,7 @@
       "title": "The Alabaster Lyceum",
       "description": "The imposing white buildings at the center of Tirgonde that stands before you is home to the largest gathering of written forms of knowledge in the land. Many, from all walks of life, call the Lyceum home and learn everything they can of history, politics, and business. Some users of the arcane rely on their patron deity for power; others still develop their arcane skill by seeking admission to the Alabaster Lyceum, where they can study the theory and apllication of magic in a controlled environment.",
       "additionalData": {},
-      "affiliations": ["Alabster Lyceum"]
+      "affiliations": ["The Alabster Lyceum"]
     }
   ]
 }
