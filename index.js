@@ -15,4 +15,14 @@ app.get("/", (req, res, next) => {
   })
 })
 
+app.get("/additionaldata", (req, res, next) => {
+  db.select("*").from("additionaldata")
+  .then((rows) => {
+    res.send(rows)
+  })
+  .catch((err) => {
+    next(err)
+  })
+})
+
 app.listen(port, () => console.log(`Porty on port ${port}!`))
