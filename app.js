@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 3005
 const data = require("./data.json")
 const cors = require("cors")
 const env = require("dotenv").config()
