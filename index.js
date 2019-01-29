@@ -9,9 +9,6 @@ const bodyParser = require("body-parser");
 
 app.use(cors())
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
-  extended: true
-}))
 
 app.get("/", (req, res, next) => {
   db.select("*").from("data")
@@ -31,9 +28,8 @@ app.get("/:id", (req, res, next) => {
   })
 })
 
-app.post("/codex"), (req, res, next) => {
-  console.log("It works")
-  res.send("It works")
+app.post("/data"), (req, res, next) => {
+  console.log(req.body)
 }
 
 app.listen(port, () => console.log(`Porty on port ${port}!`))
