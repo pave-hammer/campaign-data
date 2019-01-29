@@ -1,22 +1,14 @@
 exports.up = function(knex, Promise) {
-  // Create a table
   return knex.schema.createTable('data', table => {
     table.increments()
     table.string('name').notNullable().defaultsTo('')
     table.text('description').notNullable().defaultsTo('')
-  })
-
-  // ...and another
-  .createTable('ranks', table => {
+  }).createTable('ranks', table => {
     table.increments()
     table.integer('org_id').notNullable().references('id').inTable('data').index()
     table.string('name').notNullable().defaultsTo('')
     table.text('description').notNullable().defaultsTo('')
-  })
-
-  // Then query the table...
-  .then(function() {
-    // Deletes ALL existing entries
+  }).then(function() {
     return knex('data').del()
       .then(function () {
         return knex('data').insert([
@@ -25,11 +17,7 @@ exports.up = function(knex, Promise) {
           {id: 3, name: "The Alabaster Lyceum", description: "The imposing white buildings at the center of Tirgonde that stands before you is home to the largest gathering of written forms of knowledge in the land. Many, from all walks of life, call the Lyceum home and learn everything they can of history, politics, and business. Some users of the arcane rely on their patron deity for power; others still develop their arcane skill by seeking admission to the Alabaster Lyceum, where they can study the theory and apllication of magic in a controlled environment."}
         ]);
       });
-  })
-
-  // ...and using the insert id, insert into the other table.
-  .then(function(rows) {
-    // Deletes ALL existing entries
+  }).then(function(rows) {
     return knex('ranks').del()
       .then(function () {
         return knex('ranks').insert([
@@ -42,24 +30,15 @@ exports.up = function(knex, Promise) {
           {id: 7, org_id: 2, name: "Guide", description: "No data available"},
         ]);
       });
-  })
-
-  // Query both of the rows.
-  .then(function() {
+  }).then(function() {
     return knex('data')
       .join('ranks', 'data.id', 'ranks.org_id')
       .select('data.name as name', 'ranks.name as rank', 'ranks.description as description');
-  })
-
-  // .map over the results
-  .map(function(row) {
+  }).map(function(row) {
     console.log(row);
-  })
-
-  // Finally, add a .catch handler for the promise chain
-  .catch(function(e) {
+  }).catch(function(e) {
     console.error(e);
-  }); 
+  });
 };
 
 exports.down = function(knex, Promise) {
