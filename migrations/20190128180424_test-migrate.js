@@ -4,7 +4,6 @@ exports.up = function(knex, Promise) {
     table.increments()
     table.string('name').notNullable().defaultsTo('')
     table.text('description').notNullable().defaultsTo('')
-    table.string('affiliations').notNullable().defaultsTo('')
   })
 
   // ...and another
