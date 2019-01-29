@@ -1,13 +1,11 @@
 const express = require("express")
 const app = express()
 const port = 3005
-const cors = require("cors")
 const environment = process.env.NODE_ENV || "development";
 const knexconfig = require("./knexfile.js")[environment];
 const db = require("knex")(knexconfig);
 const bodyParser = require("body-parser");
 
-app.use(cors())
 app.use(bodyParser.json())
 
 app.get("/", (req, res, next) => {
@@ -30,6 +28,13 @@ app.get("/:id", (req, res, next) => {
 
 app.post("/data"), (req, res, next) => {
   console.log(req.body)
+  knex('data').insert(req.body)
+  .then((rows) => {
+    res.send(rows);
+  })
+  .catch((err) => {
+    next(err);
+  });
 }
 
 app.listen(port, () => console.log(`Porty on port ${port}!`))
