@@ -15,11 +15,19 @@ app.use(bodyParser.urlencoded({
 
 app.get("/", (req, res, next) => {
   db.select("*").from("data")
-  .then((rows) => {
-    res.send(rows)
+  .then(function(row) {
+    res.send(row)
   })
   .catch((err) => {
     next(err)
+  });
+})
+
+app.get("/:id", (req, res, next) => {
+  db.schema.createTable("data_ranks", table => {
+    table.increments()
+    table.string('name').references('name').inTable("data").notNullable().defaultsTo('')
+    table.text('description').references('description').inTable('data').notNullable().defaultsTo('')
   })
 })
 
