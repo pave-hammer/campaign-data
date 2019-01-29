@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const port = 8000
+const port = 3005
 const cors = require("cors")
 const environment = process.env.NODE_ENV || "development";
 const knexconfig = require("./knexfile.js")[environment];
