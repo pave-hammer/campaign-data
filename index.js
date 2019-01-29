@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.get("/", (req, res, next) => {
-  db.select("*").from("organizations")
+  db.select("*").from("data")
   .then((rows) => {
     res.send(rows)
   })
