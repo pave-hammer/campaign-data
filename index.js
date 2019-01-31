@@ -33,8 +33,24 @@ app.post("/", (req, res, next) => {
   });
 });
 
-app.put("/", (req, res, next) => {
-  console.log(req.body)
+app.put('/:id', (req, res, next) => {
+  db('organizations').update(req.body).where('id', req.params.id).returning("*")
+  .then((rows) => {
+    res.send(rows);
+  })
+  .catch((err) => {
+    next(err);
+  });
+});
+
+app.delete('/:id', (req, res, next) => {
+  db('organizations').del().where('id', req.params.id).returning("*")
+  .then((rows) => {
+    res.send(rows);
+  })
+  .catch((err) => {
+    next(err);
+  });
 })
 
 app.listen(port, () => console.log(`Porty on port ${port}!`))
