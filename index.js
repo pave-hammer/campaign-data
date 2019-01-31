@@ -16,6 +16,7 @@ app.use(cors())
 app.get("/", (req, res, next) => {
   db.select("*").from("organizations")
   .then(function(row) {
+    res.status(200)
     res.send(row)
   })
   .catch((err) => {
@@ -26,6 +27,7 @@ app.get("/", (req, res, next) => {
 app.post("/", (req, res, next) => {
   db('organizations').insert(req.body)
   .then((rows) => {
+    res.status(200)
     res.send(rows);
   })
   .catch((err) => {
@@ -36,6 +38,7 @@ app.post("/", (req, res, next) => {
 app.put('/:id', (req, res, next) => {
   db('organizations').update(req.body).where('id', req.params.id).returning("*")
   .then((rows) => {
+    res.status(200)
     res.send(rows);
   })
   .catch((err) => {
@@ -46,6 +49,7 @@ app.put('/:id', (req, res, next) => {
 app.delete('/:id', (req, res, next) => {
   db('organizations').del().where('id', req.params.id).returning("*")
   .then((rows) => {
+    res.status(200)
     res.send(rows);
   })
   .catch((err) => {
