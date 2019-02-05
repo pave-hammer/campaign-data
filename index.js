@@ -13,6 +13,16 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cors())
 
+app.get('/catagories', (req, res, next) => {
+  db('catagories').then((row) => {
+    res.status(200)
+    res.send(row)
+  })
+  .catch((err) => {
+    next(err)
+  })
+})
+
 app.get("/", (req, res, next) => {
   db.select("*").from("organizations")
   .then(function(row) {
