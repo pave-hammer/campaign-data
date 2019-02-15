@@ -12,7 +12,10 @@ exports.seed = function(knex, Promise) {
         {id: 6, name: "City of Tirgonde", description: "Main Societal Center", catagory_id: 2},
         {id: 7, name: "Magnate", description: "Lorenal I think", catagory_id: 3},
         {id: 8, name: "Frederick Gammund", description: "Right hand of the Magnate", catagory_id: 3},
-        {id: 9, name: "Another person of Interest", description: "Interesting details about the person of interest", catagory_id: 3}
+        {id: 9, name: "Another person of Interest", description: "Interesting details about the person of interest", catagory_id: 3},
+        {id: 10, name: "The Platinum Dragon", description: "A big badass dragon", catagory_id: 4},
+        {id: 11, name: "Another Diety", description: "Deets about the diety", catagory_id: 4},
+        {id: 12, name: "The Last Diety", description: "More deets about another diety", catagory_id: 4}
       ]);
     });
 };
