@@ -3,7 +3,7 @@ exports.up = function (knex, Promise) {
       table.increments()
       table.string('name').notNullable().defaultsTo('')
       table.text('description').notNullable().defaultsTo('')
-      table.string('catagory_id').notNullable().defaultsTo('')
+      table.integer('catagory_id').notNullable().defaultsTo(0)
   })
 }
 
