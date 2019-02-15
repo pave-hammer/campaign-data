@@ -13,43 +13,6 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cors())
 
-// app.get('/catagories', (req, res, next) => {
-//   knex('catagories').then((row) => {
-//     res.status(200)
-//     res.send(row)
-//   })
-//   .catch((err) => {
-//     next(err)
-//   })
-// })
-
-/* 
-Organizations: {
-  [
-    {id: Name: desc: }
-  ]
-Places: {
-  [
-    {id: }
-  ]
-}
-}
-*/
-
-// app.get('/catagories', (req, res, next) => {
-//   return knex('catagories').then(catagories => {
-//     const result = catagories.map(catagory => {
-//       return knex('content').where({catagory_id: catagory.id})
-//       .then(content => {
-//         catagory.content = content
-//         return catagory
-//       })
-//     })
-//     console.log(Promise.all(result))
-//     return Promise.all(result)
-//   })
-// })
-
 app.get('/catagories', (req, res, next) => {
   return knex('catagories')
   .then(catagories => {

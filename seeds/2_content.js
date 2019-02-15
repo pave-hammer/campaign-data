@@ -9,7 +9,10 @@ exports.seed = function(knex, Promise) {
         {id: 3, name: "The Alabaster Lyceum", description: "The imposing white buildings at the center of Tirgonde that stands before you is home to the largest gathering of written forms of knowledge in the land. Many, from all walks of life, call the Lyceum home and learn everything they can of history, politics, and business. Some users of the arcane rely on their patron deity for power; others still develop their arcane skill by seeking admission to the Alabaster Lyceum, where they can study the theory and apllication of magic in a controlled environment.", catagory_id: 1},
         {id: 4, name: "City of Alleduhn", description: "Foresting City proper", catagory_id: 2},
         {id: 5, name: "Alleduhn Ports", description: "Main trading hub for Alleduhn and Headquarters to The Carinhall", catagory_id: 2},
-        {id: 6, name: "City of Tirgonde", description: "Main Societal Center", catagory_id: 2}
+        {id: 6, name: "City of Tirgonde", description: "Main Societal Center", catagory_id: 2},
+        {id: 7, name: "Magnate", description: "Lorenal I think", catagory_id: 3},
+        {id: 8, name: "Frederick Gammund", description: "Right hand of the Magnate", catagory_id: 3},
+        {id: 9, name: "Another person of Interest", description: "Interesting details about the person of interest", catagory_id: 3}
       ]);
     });
 };
