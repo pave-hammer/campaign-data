@@ -4,7 +4,7 @@ const port = 3005
 const cors = require("cors")
 const environment = process.env.NODE_ENV || "development";
 const knexconfig = require("./knexfile.js")[environment];
-const db = require("knex")(knexconfig);
+const knex = require("knex")(knexconfig);
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json())
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors())
 
 app.get('/catagories', (req, res, next) => {
-  db('catagories').then((row) => {
+  knex('catagories').then((row) => {
     res.status(200)
     res.send(row)
   })
@@ -23,8 +23,8 @@ app.get('/catagories', (req, res, next) => {
   })
 })
 
-app.get("/", (req, res, next) => {
-  db.select("*").from("organizations")
+app.get("/content", (req, res, next) => {
+  knex.select("*").from("content")
   .then(function(row) {
     res.status(200)
     res.send(row)
@@ -35,7 +35,7 @@ app.get("/", (req, res, next) => {
 })
 
 app.post("/", (req, res, next) => {
-  db('organizations').insert(req.body)
+  knex('content').insert(req.body)
   .then((rows) => {
     res.status(200)
     res.send(rows);
@@ -46,7 +46,7 @@ app.post("/", (req, res, next) => {
 });
 
 app.put('/:id', (req, res, next) => {
-  db('organizations').update(req.body).where('id', req.params.id).returning("*")
+  knex('content').update(req.body).where('id', req.params.id).returning("*")
   .then((rows) => {
     res.status(200)
     res.send(rows);
@@ -57,7 +57,7 @@ app.put('/:id', (req, res, next) => {
 });
 
 app.delete('/:id', (req, res, next) => {
-  db('organizations').del().where('id', req.params.id).returning("*")
+  knex('content').del().where('id', req.params.id).returning("*")
   .then((rows) => {
     res.status(200)
     res.send(rows);
