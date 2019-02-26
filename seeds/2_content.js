@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
         {id: 4, name: "City of Alleduhn", description: "Foresting City proper", catagory_id: 2},
         {id: 5, name: "Alleduhn Ports", description: "Main trading hub for Alleduhn and Headquarters to The Carinhall", catagory_id: 2},
         {id: 6, name: "City of Tirgonde", description: "Main Societal Center", catagory_id: 2},
-        {id: 7, name: "Magnate", description: "Lorenal I think", catagory_id: 3},
+        {id: 7, name: "Magnate", description: "Lorenal I think. I have notes some where, I swear.", catagory_id: 3},
         {id: 8, name: "Frederick Gammund", description: "Right hand of the Magnate", catagory_id: 3},
         {id: 9, name: "Another person of Interest", description: "Interesting details about the person of interest", catagory_id: 3},
         {id: 10, name: "The Platinum Dragon", description: "A big badass dragon", catagory_id: 4},
