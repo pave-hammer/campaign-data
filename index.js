@@ -13,14 +13,14 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cors())
 
-app.get('/catagories', (req, res, next) => {
-  return knex('catagories')
-  .then(catagories => {
-    const result = catagories.map(catagory => {
-      return knex('content').where({ catagory_id: catagory.id })
+app.get('/categories', (req, res, next) => {
+  return knex('categories')
+  .then(categories => {
+    const result = categories.map(category => {
+      return knex('content').where({ category_id: category.id })
       .then(content => {
-        catagory.content = content
-        return catagory
+        category.content = content
+        return category
       })
     })  
     return Promise.all(result)
