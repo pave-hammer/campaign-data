@@ -32,17 +32,6 @@ app.get('/categories', (req, res, next) => {
   });
 })
 
-app.get("/", (req, res, next) => {
-  knex.select("*").from("content")
-  .then(function(row) {
-    res.status(200)
-    res.send(row)
-  })
-  .catch((err) => {
-    next(err)
-  });
-})
-
 app.post("/", (req, res, next) => {
   knex('content').insert(req.body)
   .then((rows) => {
