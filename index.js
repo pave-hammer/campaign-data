@@ -36,9 +36,10 @@ app.post("/categories", (req, res, next) => {
   knex('categories').insert({categoryName: req.body.categoryName}).returning('id')
   .then((id) => {
     return knex('content')
-      .insert({contentName: req.body.contentName, description: req.body.text, category_id: Number(id)})
+      .insert({contentName: req.body.contentName, description: req.body.text, category_id: Number(id)}).returning('*')
   })
   .then((rows) => {
+    console.log(rows)
     res.status(200)
     res.send(rows)
   })
