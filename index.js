@@ -33,14 +33,18 @@ app.get('/categories', (req, res, next) => {
 })
 
 app.post("/categories", (req, res, next) => {
-  knex('content').insert(req.body)
+  knex('categories').insert({categoryName: req.body.categoryName}).returning('id')
+  .then((id) => {
+    return knex('content')
+      .insert({contentName: req.body.contentName, description: req.body.text, category_id: Number(id)})
+  })
   .then((rows) => {
     res.status(200)
-    res.send(rows);
+    res.send(rows)
   })
-  .catch((err) => {
-    next(err);
-  });
+  .error((err) => {
+    next(err)
+  })
 });
 
 app.put('/:id', (req, res, next) => {

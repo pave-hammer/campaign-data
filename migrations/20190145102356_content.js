@@ -1,9 +1,9 @@
 exports.up = function (knex, Promise) {
   return knex.schema.createTable('content', table => {
       table.increments()
-      table.string('name').notNullable().defaultsTo('')
+      table.string('contentName').notNullable().defaultsTo('')
       table.text('description').notNullable().defaultsTo('')
-      table.integer('category_id').notNullable().defaultsTo(0)
+      table.integer('category_id').notNullable()
         .references('id')
         .inTable('categories')
         .onDelete('CASCADE')
