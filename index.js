@@ -39,7 +39,6 @@ app.post("/categories", (req, res, next) => {
       .insert({contentName: req.body.contentName, description: req.body.text, category_id: Number(id)}).returning('*')
   })
   .then((rows) => {
-    console.log(rows)
     res.status(200)
     res.send(rows)
   })
