@@ -32,7 +32,7 @@ app.get('/categories', (req, res, next) => {
   });
 })
 
-app.post("/", (req, res, next) => {
+app.post("/categories", (req, res, next) => {
   knex('content').insert(req.body)
   .then((rows) => {
     res.status(200)
